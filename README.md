@@ -1,6 +1,6 @@
-# CSI3335 Project Virtual Environment
+# CSI3335 Project Virtual Environment Setup
 
-This repository provides a virtual environment setup with specified dependencies for student projects in the CSI3335 course. **Please use Python 3.10 and above**
+This repository is the QueryQuintet Team repository. Setup for the virtual environment is below. **Please use Python 3.10 and above**
 
 ## Description
 
@@ -9,14 +9,8 @@ This virtual environment contains essential Python libraries and frameworks requ
 ## Instructions
 
 
-1. **Clone the Repository**:
 
-```bash
-git clone https://github.com/sanjelarun/csi3335-project-venv.git
-cd csi3335-project-venv
-```
-
-2. **Create a Virtual Environment**
+1. **Create a Virtual Environment**
 
 **For Windows**
 ```bash
@@ -27,7 +21,7 @@ python -m venv project_env
 python3 -m venv project_env
 
 ```
-3. **Activate the Virtual Environment**
+2. **Activate the Virtual Environment**
 
 **For Windows**
 ```bash
@@ -38,7 +32,7 @@ python3 -m venv project_env
 source project_env/bin/activate
 ```
 
-4. **Install the dependencies**
+3. **Install the dependencies**
 ```bash
 pip install -r requirements.txt
 ```
