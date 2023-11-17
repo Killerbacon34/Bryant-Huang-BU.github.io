@@ -1,7 +1,7 @@
 # CSI3335 Group Project QueryQuintet
 
 This repository is the QueryQuintet Team repository. 
-Setup for the virtual environment is below. **Please use Python 3.10 and above**
+Setup for the virtual environment is below. **Please use Python 3.10 and above** <br />
 Source for requirements.txt and readme steps: https://github.com/sanjelarun/csi3335-project-venv
 
 ## Description
