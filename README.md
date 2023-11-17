@@ -1,6 +1,7 @@
-# CSI3335 Project Virtual Environment Setup
+# CSI3335 Group Project QueryQuintet
 
-This repository is the QueryQuintet Team repository. Setup for the virtual environment is below. **Please use Python 3.10 and above**
+This repository is the QueryQuintet Team repository. 
+Setup for the virtual environment is below. **Please use Python 3.10 and above**
 
 ## Description
 
@@ -11,6 +12,8 @@ This virtual environment contains essential Python libraries and frameworks requ
 
 
 1. **Create a Virtual Environment**
+
+open project directory
 
 **For Windows**
 ```bash
