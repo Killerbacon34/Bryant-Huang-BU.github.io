@@ -1,17 +1,17 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
+
 
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
 
+
 @app.route('/post', methods=['POST'])
 def post():
     return "recived: {}".format(request.form)
 
-if __name__ == "__main__":
-    app.run(debug=True)
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -21,3 +21,11 @@ def login():
     else:
         user = request.args.get('nm')
         return redirect(url_for('success', name=user))
+
+
+@app.route('/home')
+def search_page():
+    return "Will add search here:"
+
+
+app.run(debug=True)
