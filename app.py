@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_login import login_required, LoginManager, current_user, login_user
 import home
+import search
 
 app = Flask(__name__, template_folder='.')
 # login = LoginManager(app)
@@ -35,6 +36,13 @@ def search_page():
     name = request.args.get('nm', '')
     print(name)
     return home.home_page(name)
+
+
+@app.route('/results')
+def results():
+    name = request.args.get('nm', '')
+    year = request.args.get('year', '')
+    return search.search_page(name, year)
 
 
 if __name__ == '__main__':
