@@ -70,6 +70,7 @@ def managerInfo():
         result = conn.execute(text(query2), params)
         for row in result:
             print(row)
+    return result
 
 
 if __name__ == '__main__':
