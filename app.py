@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_login import login_required, LoginManager, current_user, login_user
 import home
 import search
-
+import manager
 app = Flask(__name__, template_folder='.')
 # login = LoginManager(app)
 
@@ -21,12 +21,20 @@ def post():
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
-        user = request.form['nm']
-        return redirect(url_for('/home', name=user))
+        username = request.form['username']
+        password = request.form['password']
+        # add login functionality here
+        # if login successful, return redirect(url_for('home'))
+        # else return render_template('login.html')
     else:
-        user = request.args.get('nm')
-        return redirect(url_for('success', name=user))
+        return render_template('login.html')
 
+@app.route('/manager/<id>', methods=['GET'])
+def login():
+    if request.method == 'GET':
+        return manager.manager_page(id)
+    else:
+        return render_template('login.html')
 
 # after adding login info:
 # @app.route('/home/<username>')
