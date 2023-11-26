@@ -52,6 +52,25 @@ def results():
     year = request.args.get('year', '')
     return search.search_page(name, year)
 
+@app.route('/results', methods=['GET'])
+def managerInfo():
+    params = {'x': sys.argv[1],
+              'y': sys.argv[2]}
+    query2 = "SELECT team_name, yearID FROM teams JOIN managers USING(teamID, yearID) JOIN people USING(playerID) WHERE nameFirst =:x and nameLast =:y";    
+    url_object = URL.create(
+    "mysql+pymysql",
+    username="root",
+    password="csi3335rocks",
+    host="localhost",
+    database="QueryQuintet",
+    port=3306,)
+    print(url_object)
+    engine = create_engine(url_object)
+    with engine.connect() as conn:
+        result = conn.execute(text(query2), params)
+        for row in result:
+            print(row)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
